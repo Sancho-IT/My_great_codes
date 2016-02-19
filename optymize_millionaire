@@ -1,0 +1,56 @@
+//Что-то типа игры "Кто хочет стать миллионером?" на тему Каратэ:)
+#include <iostream>
+using namespace std;
+void main()
+{
+	char key, key2;
+
+	cout << "\n\tTHE MILLIONAIRE\n\n";
+	cout << "\tQuestion #1:\n";
+	cout << "\tWho is the founder of the Kyokushin style of Karate?\n\n";
+	cout << "\tSelect your answer:\n";
+	cout << "\n\t A - if Miyagi Chojun\n";
+	cout << "\n\t B - if Uechi Kanbun\n";
+	cout << "\n\t C - if Oyama Masutatsu\n";
+	cout << "\n\t D - if Mabuni Kenwa\n\n";
+	cin >> key;
+
+	switch (key) {
+	case 'C':
+		cout << "\n\tCorrect answer: Oyama Masutatsu\n\n";
+		cout << "\n\tCongratulations! Next question\n\n\n";
+		break;
+	
+	default:
+		cout << "\n\tSorry, but you lose.\n";
+		cout << "\n\tSee you at the next game!\n\n\n\n";
+		break;
+	}
+
+	if (key != 'C') {
+		
+	}
+		
+	else {	
+		cout << "\tQuestion #2:\n";
+		cout << "\tWhere is the birthplace of Karate?\n\n";
+		cout << "\tSelect your answer:\n";
+		cout << "\n\t A - if Continental Japan\n";
+		cout << "\n\t B - if Okinawa\n";
+		cout << "\n\t C - if Thailand\n";
+		cout << "\n\t D - if North China\n\n";
+		cin >> key2;
+
+		switch (key2) {
+		case 'B':
+			cout << "\n\tCorrect answer: Okinawa\n\n";
+			cout << "\n\tCongratulations! You are champion!!! Take your million!\n\n\n\n";
+			break;
+
+		default:
+			cout << "\n\tSorry, but you lose.\n";
+			cout << "\n\tSee you at the next game!\n\n\n\n";
+		}
+	}
+}
+
