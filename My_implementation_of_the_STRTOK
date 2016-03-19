@@ -1,0 +1,32 @@
+//Мой вариант реализации встроенной функции strtok
+#include <iostream>
+#include <locale.h>
+using namespace std;
+
+char myStrtok(char* pChars, int size);
+
+void main() {
+	setlocale(LC_ALL, "RUS");
+	cout << "РАЗБИВКА СТРОКИ НА ОТДЕЛЬНЫЕ ЛЕКСЕМЫ"<<"\n\n";
+	
+	char str[] = "Уэчи-рю - оригинальный стиль традиционного Окинавского Каратэ.";
+	cout << str << "\n\n";
+
+	char *pStr = str;
+	*pStr = myStrtok(str, 63);
+	
+	cout << "\n\n\n\n";
+}
+
+char myStrtok(char* pChars, int size) {
+	char token = ' ';
+	for (int i = 0; i < size; ++i) {
+		if (pChars[i] == token) {
+			std::cout << "\n";
+		}
+		else {
+			std::cout << pChars[i];
+		}
+	}
+	return size;
+}
