@@ -3,7 +3,7 @@
 #include <locale.h>
 using namespace std;
 
-char myStrtok(char* pChars, int size);
+void myStrtok(char* pChars, int size);
 
 void main() {
 	setlocale(LC_ALL, "RUS");
@@ -12,21 +12,19 @@ void main() {
 	char str[] = "Уэчи-рю - оригинальный стиль традиционного Окинавского Каратэ.";
 	cout << str << "\n\n";
 
-	char *pStr = str;
-	*pStr = myStrtok(str, 63);
+	myStrtok(str, 63);
 	
 	cout << "\n\n\n\n";
 }
 
-char myStrtok(char* pChars, int size) {
+void myStrtok(char* pChars, int size) {
 	char token = ' ';
 	for (int i = 0; i < size; ++i) {
 		if (pChars[i] == token) {
-			std::cout << "\n";
+			cout << "\n";
 		}
 		else {
-			std::cout << pChars[i];
+			cout << pChars[i];
 		}
 	}
-	return size;
 }
